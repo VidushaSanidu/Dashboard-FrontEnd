@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DarkModeSwitcher from "./DarkModeSwitcher";
+import DarkModeSwitcher from "./darkModeSwitcher";
 import DropdownMessage from "./messageBar";
 import DropdownNotification from "./notification";
 import DropdownProfile from "./profile";
