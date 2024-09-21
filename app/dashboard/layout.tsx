@@ -14,7 +14,7 @@ export default function DashboardLayout({
     <main>
       <div className="flex h-screen overflow-hidden">
         {/* Sidebar  }comment karana side bar */
-        /*
+/*
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
           <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
@@ -34,10 +34,13 @@ export default function DashboardLayout({
 import { useState } from "react";
 import Header from "@/app/components/header";
 import { Sidebar } from "@/app/components/sidebar";
-import AccountSettingsPage from "../account/page";
+import AccountSettingsPage from "./account/page";
 
-
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -52,12 +55,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
         {/* Page Content */}
         <main className="flex-grow p-6 bg-gray-100 dark:bg-gray-900 overflow-y-auto">
-
-          <AccountSettingsPage/>
           {children}
         </main>
       </div>
     </div>
   );
 }
-
